@@ -1,8 +1,8 @@
 package phone.smss;
 
-import phone.PhoneBill;
+import phone.BillAction;
 
-public class SMSBundle extends PhoneBill {
+public class SMSBundle implements BillAction {
     private double smsCost;
     private int qty;
 
@@ -11,11 +11,8 @@ public class SMSBundle extends PhoneBill {
         this.qty = qty;
     }
 
-    public int getQty() {
-        return qty;
-    }
-
-    public double getSmsCost() {
-        return smsCost;
+    @Override
+    public double totalCost() {
+        return qty * smsCost;
     }
 }

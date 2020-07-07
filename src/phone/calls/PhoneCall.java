@@ -1,15 +1,16 @@
 package phone.calls;
 
-import phone.PhoneBill;
+import phone.BillAction;
 
-public class PhoneCall extends PhoneBill {
+public class PhoneCall implements BillAction {
     public double callCost;
 
     public PhoneCall(double callCost) {
         this.callCost += callCost;
     }
 
-    public double getCallCost() {
+    @Override
+    public double totalCost() {
         return callCost;
     }
 }

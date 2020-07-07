@@ -1,16 +1,16 @@
 package phone.databundles;
 
-import phone.PhoneBill;
+import phone.BillAction;
 
-public class DataBundle extends PhoneBill {
+public class DataBundle implements BillAction {
     private double dataCost;
 
     public DataBundle(double megabytes) {
         this.dataCost = megabytes;
     }
 
-    public double getDataCost() {
+    @Override
+    public double totalCost() {
         return dataCost;
     }
-
 }
