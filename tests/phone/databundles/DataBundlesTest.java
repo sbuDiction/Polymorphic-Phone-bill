@@ -2,7 +2,6 @@ package phone.databundles;
 
 import org.junit.Test;
 import phone.PhoneBill;
-import phone.calls.PhoneCall;
 
 import static org.junit.Assert.assertEquals;
 

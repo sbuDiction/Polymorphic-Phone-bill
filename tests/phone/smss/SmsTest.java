@@ -2,7 +2,6 @@ package phone.smss;
 
 import org.junit.Test;
 import phone.PhoneBill;
-import phone.databundles.DataBundle;
 
 import static org.junit.Assert.assertEquals;
 
