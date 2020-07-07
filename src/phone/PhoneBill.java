@@ -9,31 +9,16 @@ public class PhoneBill implements BillAction {
 
     public void accept(BillAction billAction) {
         if (billAction instanceof PhoneCall) {
-            call(((PhoneCall) billAction).callCost);
+            total += ((PhoneCall) billAction).getCallCost();
         } else if (billAction instanceof SMSBundle) {
-            sms(((SMSBundle) billAction).qty, ((SMSBundle) billAction).smsCost);
+            total += ((SMSBundle) billAction).getQty() * ((SMSBundle) billAction).getSmsCost();
         } else if (billAction instanceof DataBundle) {
-            data(((DataBundle) billAction).dataCost);
+            total += ((DataBundle) billAction).getDataCost();
         }
     }
 
     @Override
     public double totalCost() {
         return total;
-    }
-
-    @Override
-    public void call(double cost) {
-        total += cost;
-    }
-
-    @Override
-    public void sms(int qty, double cost) {
-        total += qty * cost;
-    }
-
-    @Override
-    public void data(double cost) {
-        total += cost;
     }
 }

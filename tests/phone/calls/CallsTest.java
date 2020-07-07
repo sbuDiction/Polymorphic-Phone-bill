@@ -9,8 +9,8 @@ public class CallsTest {
 
     @Test
     public void makeCallTest() {
-        PhoneBill bill = new PhoneBill();
         PhoneCall call = new PhoneCall(1.50);
+        PhoneBill bill = new PhoneBill();
         bill.accept(call);
         bill.accept(call);
         bill.accept(call);
