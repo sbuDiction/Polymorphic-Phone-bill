@@ -1,7 +1,6 @@
 package phone.databundles;
 
 import org.junit.Test;
-import phone.PhoneBill;
 
 import static org.junit.Assert.assertEquals;
 
@@ -38,6 +37,6 @@ public class DataBundlesTest {
 
     @Test
     public void totalCostBelowZero() {
-        assertEquals(-151.5, new DataBundle(-202).totalCost(), 0.01);
+        assertEquals(151.5, new DataBundle(-202).totalCost(), 0.01);
     }
 }

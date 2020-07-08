@@ -19,6 +19,6 @@ public class DataBundle implements BillAction {
 
     @Override
     public double totalCost() {
-        return dataCost;
+        return Math.abs(dataCost);
     }
 }
